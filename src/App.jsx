@@ -22,7 +22,7 @@ const App = () => {
       <Router>
         <ScrollTop />
         <Routes>
-          <Route path="/BookMyGas" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/*" element={<NoPage />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
