@@ -119,16 +119,55 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-white via-gray-700 to-black z-50 sticky top-0">
       <div className="flex flex-col lg:flex-row lg:justify-between items-center py-3 lg:px-3">
-        <div className="left py-3 lg:py-0">
+        <div className="left py-3 lg:py-0 flex justify-between items-center w-full lg:w-auto px-5 lg:px-0">
           <Link to={"/"}>
             <h2 className="font-bold text-black text-2xl text-center">
               BookMyGas
             </h2>
           </Link>
+          <button
+            className="lg:hidden block text-black"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {/* Mobile Menu Toggle Button (Hamburger Icon) */}
+            {isMobileMenuOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="white"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="white"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            )}
+          </button>
         </div>
 
         <div
-          className={`right ${isMobileMenuOpen ? "block" : "hidden"} lg:block`}
+          className={`right ${
+            isMobileMenuOpen ? "block" : "hidden"
+          } lg:block w-full lg:w-auto`}
         >
           {navList}
         </div>
