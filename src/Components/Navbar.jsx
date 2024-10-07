@@ -49,9 +49,9 @@ const Navbar = () => {
       </li>
       <li>
         <Link
-          to="/BookMyGas"
+          to="/"
           className={`${
-            location.pathname === "/BookMyGas"
+            location.pathname === "/"
               ? "text-red-600 bg-black px-3 py-1 rounded-lg underline underline-offset-4"
               : "text-black hover:text-red-600 hover:underline"
           }`}
@@ -120,7 +120,7 @@ const Navbar = () => {
     <nav className="bg-gradient-to-r from-white via-gray-700 to-black z-50 sticky top-0">
       <div className="flex flex-col lg:flex-row lg:justify-between items-center py-3 lg:px-3">
         <div className="left py-3 lg:py-0">
-          <Link to={"/BookMyGas"}>
+          <Link to={"/"}>
             <h2 className="font-bold text-black text-2xl text-center">
               BookMyGas
             </h2>
