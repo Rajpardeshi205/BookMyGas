@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom"; // Use HashRouter
 import HomePage from "/src/Pages/HomePage";
 import NoPage from "/src/Pages/NoPage";
 import About from "/src/Components/About";
@@ -18,8 +18,7 @@ import ScrollTop from "./Components/ScrollTop";
 const App = () => {
   return (
     <MyState>
-      {" "}
-      <Router>
+      <Router> {/* Use HashRouter */}
         <ScrollTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
